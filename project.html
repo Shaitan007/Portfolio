@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style2.css">
+     <link rel="stylesheet" href="project.js">
+
+	</head>
+
+
+    <header>
+		
+    <nav id="navbar">
+        <a href="index.html">Profile</a>
+        <a href="project.html"class="active">Project</a>
+        <a href="contact.html">Contact us</a>
+    </nav>
+			<div class="con">
+    	<h1>Project IN Stack</h1></div>
+		<div class="con2">
+	    <p>👇 Scroll down to see the project</p>  </div>
+	
+	<source src="https://drive.google.com/file/d/16JiR7R1Y4N_VBG7K4O6yUy49RQ3jmrG4/preview" width="100%" height="100%" allow="autoplay">		
+
+</div>
+
+	</header> 
+<body> 
+        
+		
+  
+<main>
+	<ul id="cards">
+		<li class="card" id="card_1">
+			<div class="card__content">
+				<div>
+					<h2>AI Blog Genrater</h2>
+					<p>In this project user can genrate blog throw AI</p>
+					<p><a href="https://bharatbhushan.pythonanywhere.com/" class="btn btn--accent">Site Link</a></p>
+				</div>
+				<figure>
+					<img src="https://3.bp.blogspot.com/-iFMzsGVzB1o/VIzZf2iHhvI/AAAAAAAAHDM/wx_G9LUbU9s/s1600/Anime-Writing-Yui-Hirasawa.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_2">
+			<div class="card__content">
+				<div>
+					<h2>Card Two</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p><a href="#top" class="btn btn--accent">Read more</a></p>
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_3">
+			<div class="card__content">
+				<div>
+					<h2>Card Three</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p><a href="#top" class="btn btn--accent">Read more</a></p>
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_4">
+			<div class="card__content">
+				<div>
+					<h2>Card Four</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p><a href="#top" class="btn btn--accent">Read more</a></p>
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+	</ul>
+</main>
+<aside>
+	<p>Lorq.</p>
+	
+</aside>
+        
+        
+        
+    </article>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scroll down
+                    navbar.style.top = '-50px';
+                } else {
+                    // Scroll up
+                    navbar.style.top = '0';
+                }
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+</body>
+</html>
