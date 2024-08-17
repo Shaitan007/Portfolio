@@ -32,71 +32,66 @@ p {
 @media (max-width: 768px) {
   /* Adjust styles for smaller screens */
   .details-container {
-      padding: 10px;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    position: static;
   }
-  /* Other adjustments as needed */
+  
+  .hello {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hello2 {
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .waviy {
+    font-size: 30px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  nav {
+    font-size: 1rem;
+    width: 90%;
+    margin-left: 5%;
+    top: 80px;
+  }
+
+  nav a {
+    padding: 0 10px;
+  }
 }
 
-
-
-
-
-
-
-
-
-header{
-  height:20px;
+/* Header */
+header {
+  height: 20px;
   width: 100%;
   box-sizing: border-box;
   position: fixed;
-  box-sizing: border-box;
   top: 10%;
-  width: 100%;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #fff;
   transition: 0.3s;
-  z-index:1000;
-  position: fixed
+  z-index: 1000;
 }
 
-/* matrix rain */
-* {margin: 0; padding: 0}
-body {background: #000;}
-canvas {display: block;}
-
-
-  /* jumping words */
-
-  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
+/* Matrix rain */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+  background: #000;
 }
 
-
-/* Header */
-
-.details-container{
-  padding-top:50px ;
-}
-
+/* Jumping words */
 .waviy {
   backdrop-filter: blur(10px);
-  margin-left: 35%;
-  bottom: 89%;
   width: 30%;
-  padding-top: 10px ;
-  z-index:1000;
-  transition: top 0.3s;
-  position:fixed;    
+  padding-top: 10px;
+  z-index: 1000;
+  position: fixed;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
   font-size: 40px;
 }
@@ -108,88 +103,79 @@ body {
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
-  
 }
 @keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
+  0%, 40%, 100% {
+    transform: translateY(0);
   }
   20% {
-    transform: translateY(-20px)
+    transform: translateY(-20px);
   }
 }
 
-@font-face {
-  font-family: Moderne Sans;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2)
-}
-
-
-nav  {
+/* Navigation */
+nav {
   backdrop-filter: blur(10px);
   font-size: 1.2em;
   width: 30%;
   height: 50px;
   margin-left: 35%;
-  margin-top:1%;
-  padding:2px;
-  color:white;
+  margin-top: 1%;
+  padding: 2px;
+  color: white;
   text-decoration: none;
   position: fixed;
   top: 100px;
-  
 }
+
 nav a {
- margin: 0%;
- padding: 0 20px;
-list-style: none;
- color: #fff;
- size: auto;
- font-weight:bold;
- line-height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 50px;
 }
-nav a:hover,
-nav a.active
-{  background: rgba(31, 247, 103, 0.438); }
 
+nav a:hover, nav a.active {
+  background: rgba(31, 247, 103, 0.438);
+}
 
-.navbar{
-   padding: 50px 20px;
-   min-height: 100vh;
-  }
-
-
-/* body */
-
+/* Details container */
 .details-container {
   backdrop-filter: blur(20px);
-  height: 500px;
-  margin-left: -150px;
-  margin-top: 13% ;
-  color: #ffff;
+  height: auto;
+  margin-top: 13%;
+  color: #fff;
   border: 4px solid lightgreen;
-  padding:20px;
+  padding: 20px;
   text-align: center;
   position: fixed;
-  top:0;
-  left:31%;
+  top: 0;
+  left: 31%;
   z-index: 1;
 }
-.details-container h2{
+
+.details-container h2 {
   font-size: 1.4rem;
 }
-.details-container p{
+
+.details-container p {
   font-size: 1.2rem;
 }
 
-h1{  font-size: 1.4rem; }
-p{  font-size: 0.9rem; }
+h1 {
+  font-size: 1.4rem;
+}
 
-.hello{
+p {
+  font-size: 0.9rem;
+}
+
+.hello {
   margin-right: 50%;
 }
 
-.hello2{
+.hello2 {
   margin-top: -21%;
   margin-left: 46%;
 }
