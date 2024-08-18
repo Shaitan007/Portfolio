@@ -38,7 +38,7 @@ canvas {
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
-    margin-top: 15%; /* Push down more for mobile view */
+    margin-top: 45%; /* Push down more for mobile view */
   }
 }
 
