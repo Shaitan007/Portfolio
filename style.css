@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 /* Canvas styles */
@@ -14,11 +17,9 @@ canvas {
 
 /* Responsive layout */
 .details-container {
-  max-width: 90% ;
-  margin:  auto;
+  max-width: 90%;
+  margin: auto;
   padding: 20px;
-
-
 }
 
 /* Adjust font sizes */
@@ -34,90 +35,60 @@ p {
 @media (max-width: 768px) {
   /* Adjust styles for smaller screens */
   .details-container {
-      padding: 10px;
+    padding: 10px;
   }
-  /* Other adjustments as needed */
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-
-header{
-  height:20px;
+/* Header styles */
+header {
+  height: auto;
   width: 100%;
   box-sizing: border-box;
   position: fixed;
-  top: 10%;
+  top: 0;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
   transition: 0.3s;
-  z-index:1000;
+  z-index: 1000;
   display: flex;
-    flex-direction: column; /* Switch to column layout on smaller screens */
-    align-items: center;
-}
-@media (max-width: 768px) {
-  header {
-    height: auto;
-    width: 100%;
-    top: 0;
-    font-size: 1.5rem; /* Adjust font size for mobile */
-    padding: 10px;
-  }
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-/* matrix rain */
-* {margin: 0; padding: 0}
-body {background: #000;}
-canvas {display: block;}
-
-
-  /* jumping words */
-
-  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
+/* Matrix rain */
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+  background: #000;
+}
+canvas {
+  display: block;
 }
 
-
-/* Header */
-
-.details-container{
-  padding-top:50px ;
-}
+/* Jumping words */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 .waviy {
-  margin-left: 35%;
-  width: 30%;
-  font-size: 40px;
+  margin: 10px auto;
+  width: auto;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-.header-container {
-    display: flex;
-    flex-direction: row; /* Default for larger screens */
-}
-
-@media (max-width: 600px) {
-    .header-container {
-        flex-direction: column; /* Stack items on top of each other on smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-  .waviy {
-    margin-left: 0;
-    width: 100%;
-    font-size: 1.8rem; /* Adjust font size for mobile */
-    padding: 20px 0;
-    text-align: center;
-  }
-}
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
   position: relative;
@@ -126,118 +97,83 @@ body {
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
-  
 }
+
 @keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
+  0%, 40%, 100% {
+    transform: translateY(0);
   }
   20% {
-    transform: translateY(-20px)
+    transform: translateY(-20px);
   }
 }
 
-@font-face {
-  font-family: Moderne Sans;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2)
-}
-
-
-nav  {
+/* Navigation bar styles */
+nav {
   backdrop-filter: blur(10px);
-  font-size: 1.2em;
-  width: 30%;
-  height: 50px;
-  margin-left: 35%;
-  margin-top:1%;
-  padding:2px;
-  color:white;
+  font-size: 1em;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  color: white;
   text-decoration: none;
   position: fixed;
-  top: 100px;
-  
+  top: 50px;
+  text-align: center;
 }
+
 nav a {
- margin: 0%;
- padding: 0 20px;
-list-style: none;
- color: #fff;
- size: auto;
- font-weight:bold;
- line-height: 50px;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
 }
+
 nav a:hover,
-nav a.active
-{  background: rgba(31, 247, 103, 0.438); }
-
-
-.navbar{
-   padding: 50px 20px;
-   min-height: 100vh;
-   display: flex;
-    flex-direction: column; /* Ensure that menu items stack vertically */
-    text-align: center;
-  }
-
-  @media only screen and (max-width: 600px) {
-    h1, h2, h3 {
-        font-size: 1.5rem;
-        margin: 10px 0;
-    }
-    
-    .navbar a {
-        font-size: 1rem;
-        padding: 8px;
-    }
+nav a.active {
+  background: rgba(31, 247, 103, 0.438);
 }
-/* body */
 
+/* Navbar */
+.navbar {
+  padding: 20px 0;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Details container */
 .details-container {
-  height: 500px;
-  margin-left: -150px;
-  margin-top: 13% ;
+  position: relative;
+  margin: 10% auto;
+  width: 90%;
+  max-width: 800px;
   color: #ffff;
   border: 4px solid lightgreen;
-  padding:20px;
+  padding: 20px;
   text-align: center;
-  position: fixed;
-  top:0;
-  left:31%;
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .details-container {
-    position: relative;
-    margin-left: 0;
-    left: 0;
-    top: auto;
-    margin-top: 20px;
-    width: 90%; /* Adjust width for mobile */
-    height: auto; /* Let content define the height */
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
   }
-}
 
-h2 {
-  font-size: 2rem;
-}
-p {
-  font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.5rem; /* Reduce font size for mobile */
+  .navbar a {
+    font-size: 1rem;
+    padding: 8px;
   }
-  p {
-    font-size: 1rem; /* Reduce font size for mobile */
-  }
-}
-@media (max-width: 768px) {
-  body {
-    font-size: 14px; /* General font size adjustment */
-    padding: 0;
-    margin: 0;
+  
+  .waviy {
+    font-size: 1.8rem;
+    padding: 20px 0;
+    text-align: center;
   }
 
   nav {
@@ -248,10 +184,9 @@ p {
     text-align: center;
   }
 
-  .navbar {
-    padding: 20px 0;
-    min-height: auto;
+  .details-container {
+    margin-top: 20px;
+    width: 90%;
+    height: auto;
   }
-
-  /* Further adjustments as needed */
 }
