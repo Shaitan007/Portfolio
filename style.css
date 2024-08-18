@@ -7,38 +7,37 @@ body {
   justify-content: center;
   align-items: center; 
   background: #000;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Canvas styles */
 canvas {
   display: block;
+  position: fixed; /* Fix canvas in place */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh; /* Adjust height as needed */
+  height: 100vh; /* Full viewport height */
+  z-index: -1; /* Send canvas to the back */
 }
 
-/* Responsive layout */
+/* Details container */
 .details-container {
   max-width: 90%;
-  margin: auto;
+  margin: 10% auto;
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  color: #fff;
+  border: 4px solid lightgreen;
+  text-align: center;
+  z-index: 1;
 }
 
-/* Adjust font sizes */
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-/* Media queries for smaller screens */
+/* Responsive layout adjustments */
 @media (max-width: 768px) {
-  /* Adjust styles for smaller screens */
   .details-container {
     padding: 10px;
   }
@@ -57,14 +56,12 @@ p {
 
 /* Header styles */
 header {
-  height: auto;
   width: 100%;
   box-sizing: border-box;
   position: fixed;
   top: 0;
   text-align: center;
   color: white;
-  transition: 0.3s;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -146,23 +143,6 @@ nav a.active {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-/* Details container */
-.details-container {
-  position: relative;
-  margin: 10% auto;
-  width: 90%;
-  max-width: 800px;
-  color: #fff;
-  border: 4px solid lightgreen;
-  padding: 20px;
-  text-align: center;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
-  backdrop-filter: blur(10px); /* Apply blur to the background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
 }
 
 /* Media queries for smaller screens */
