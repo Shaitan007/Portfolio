@@ -42,7 +42,7 @@ canvas {
     padding: 10px;
     margin: 10% auto 0; /* Adjust top margin */
     width: 90%;
-    margin-top: 40px;
+    
     /* You can set a specific height if needed */
   }
   h2 {
@@ -170,7 +170,7 @@ nav a.active {
 
   nav {
     position: fixed;
-    top: 10%;
+    top: 0;
     left: 0;
     right: 0;
     height: auto;
@@ -180,7 +180,7 @@ nav a.active {
   }
 
   .details-container {
-    margin-top: 80px; /* Move container down on mobile */
+    margin:20px auto 20px; /* Move container down on mobile */
     width: 90%;
     height: auto;
   }
