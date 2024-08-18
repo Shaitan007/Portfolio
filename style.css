@@ -24,7 +24,7 @@ canvas {
 /* Details container */
 .details-container {
   max-width: 90%;
-  margin: 10% auto;
+  margin: 10% auto; /* Center container horizontally and space from top */
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
@@ -34,12 +34,16 @@ canvas {
   border: 4px solid lightgreen;
   text-align: center;
   z-index: 1;
+  position: relative; /* Ensure it's properly positioned within its container */
 }
 
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
+    margin: 10% auto 0; /* Adjust top margin */
+    width: 90%;
+    /* You can set a specific height if needed */
   }
   h2 {
     font-size: 1.5rem;
@@ -175,7 +179,7 @@ nav a.active {
   }
 
   .details-container {
-    margin-top: 20px;
+    margin-top: 20px; /* Move container down on mobile */
     width: 90%;
     height: auto;
   }
