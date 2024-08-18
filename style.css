@@ -14,7 +14,7 @@ canvas {
 
 /* Responsive layout */
 .details-container {
-  max-width: 800px;
+  max-width: auto ;
   margin: 0 auto;
   padding: 20px;
 }
@@ -43,14 +43,20 @@ header{
   width: 100%;
   box-sizing: border-box;
   position: fixed;
-  box-sizing: border-box;
   top: 10%;
-  width: 100%;
   text-align: center;
   color: rgb(255, 255, 255);
   transition: 0.3s;
   z-index:1000;
-  position: fixed
+}
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    width: 100%;
+    top: 0;
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    padding: 10px;
+  }
 }
 
 /* matrix rain */
@@ -82,16 +88,19 @@ body {
 }
 
 .waviy {
-  backdrop-filter: blur(10px);
   margin-left: 35%;
-  bottom: 89%;
   width: 30%;
-  padding-top: 10px ;
-  z-index:1000;
-  transition: top 0.3s;
-  position:fixed;    
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
   font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .waviy {
+    margin-left: 0;
+    width: 100%;
+    font-size: 1.8rem; /* Adjust font size for mobile */
+    padding: 20px 0;
+    text-align: center;
+  }
 }
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
@@ -155,7 +164,6 @@ nav a.active
 /* body */
 
 .details-container {
-  backdrop-filter: blur(20px);
   height: 500px;
   margin-left: -150px;
   margin-top: 13% ;
@@ -168,21 +176,53 @@ nav a.active
   left:31%;
   z-index: 1;
 }
-.details-container h2{
-  font-size: 1.4rem;
+
+@media (max-width: 768px) {
+  .details-container {
+    position: relative;
+    margin-left: 0;
+    left: 0;
+    top: auto;
+    margin-top: 20px;
+    width: 90%; /* Adjust width for mobile */
+    height: auto; /* Let content define the height */
+  }
 }
-.details-container p{
+
+h2 {
+  font-size: 2rem;
+}
+p {
   font-size: 1.2rem;
 }
 
-h1{  font-size: 1.4rem; }
-p{  font-size: 0.9rem; }
-
-.hello{
-  margin-right: 50%;
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem; /* Reduce font size for mobile */
+  }
+  p {
+    font-size: 1rem; /* Reduce font size for mobile */
+  }
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* General font size adjustment */
+    padding: 0;
+    margin: 0;
+  }
 
-.hello2{
-  margin-top: -21%;
-  margin-left: 46%;
+  nav {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    height: auto;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 20px 0;
+    min-height: auto;
+  }
+
+  /* Further adjustments as needed */
 }
