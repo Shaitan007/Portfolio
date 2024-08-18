@@ -21,7 +21,7 @@ canvas {
 /* Details container */
 .details-container {
   max-width: 90%;
-  margin: 10% auto; /* Center container horizontally and space from top */
+  margin: 40% auto; /* Center container horizontally and space from top */
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
@@ -157,13 +157,13 @@ nav a.active {
     left: 0;
     right: 0;
     height: auto;
-    text-align: center;
+    text-align: center;a
     padding: 10px 0;
     z-index: 1000;
   }
 
   .details-container {
-    margin: 20% auto; /* Significant top margin to push it down */
+    margin: 40% auto; /* Significant top margin to push it down */
     width: 90%;
     height: auto;
   }
