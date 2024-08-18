@@ -21,7 +21,7 @@ canvas {
 /* Details container */
 .details-container {
   max-width: 90%;
-  margin: 40% auto; /* Center container horizontally and space from top */
+  margin: 20% auto; /* Center container horizontally and space from top */
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
@@ -38,7 +38,7 @@ canvas {
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
-    margin-top: 45%; /* Push down more for mobile view */
+    margin-top: 25%; /* Push down more for mobile view */
   }
 }
 
@@ -163,7 +163,7 @@ nav a.active {
   }
 
   .details-container {
-    margin: 70% auto; /* Significant top margin to push it down */
+    margin: 20% auto; /* Significant top margin to push it down */
     width: 90%;
     height: auto;
   }
