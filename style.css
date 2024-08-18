@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   background: #000;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -10,43 +13,54 @@ body {
 /* Canvas styles */
 canvas {
   display: block;
-  position: fixed;
+  position: fixed; /* Fix canvas in place */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100%; /* Full viewport height */
   z-index: -1; /* Send canvas to the back */
 }
 
 /* Details container */
 .details-container {
-  margin-top: 20px;
   max-width: 90%;
-  margin: 20% auto; /* Center container horizontally and space from top */
+  margin: 10% auto; /* Center container horizontally and space from top */
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
-  backdrop-filter: blur(10px); /* Apply blur to the background */
+  backdrop-filter: blur(2px); /* Apply blur to the background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
   color: #fff;
   border: 4px solid lightgreen;
   text-align: center;
   z-index: 1;
-  position: relative;
+  position: relative; /* Ensure it's properly positioned within its container */
 }
 
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
-    margin-top: 30%; /* Push down more for mobile view */
-    position: relative 
+    margin: 10% auto 0; /* Adjust top margin */
+    width: 90%;
+    
+    /* You can set a specific height if needed */
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
   }
 }
 
 /* Header styles */
 header {
-  width: 50%;
+  width: 100%;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -107,8 +121,8 @@ nav {
   padding: 10px 0;
   color: white;
   text-decoration: none;
-  position: relative;
-  top: 50px; /* Adjust according to your layout */
+  position: fixed;
+  top: 70px; /* Adjust according to your layout */
   text-align: center;
   z-index: 1000;
 }
@@ -133,6 +147,7 @@ nav a.active {
   display: flex;
   flex-direction: column;
   text-align: center;
+  
 }
 
 /* Media queries for smaller screens */
@@ -165,8 +180,7 @@ nav a.active {
   }
 
   .details-container {
-    margin-top: 40%;
-    positon: realtive;
+    margin:20px auto 20px; /* Move container down on mobile */
     width: 90%;
     height: auto;
   }
