@@ -46,7 +46,7 @@ canvas {
 
 /* Header styles */
 header {
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -107,7 +107,7 @@ nav {
   padding: 10px 0;
   color: white;
   text-decoration: none;
-  position: fixed;
+  position: relative;
   top: 50px; /* Adjust according to your layout */
   text-align: center;
   z-index: 1000;
