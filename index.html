@@ -4,55 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas>
-     <script>   
-      // Initialising the canvas
-     var canvas = document.querySelector('canvas'),
-     ctx = canvas.getContext('2d');
-        // Setting the width and height of the canvas
-     canvas.style.width = '100%';   
-     canvas.style.height = '100%';
-     // Setting up the letters
-     var letters = 'ABCDEFईउऊGHIJKLMNほअआOPQRST7654UV321XYZあいうはふइएऐओऔ987654अं3अःऋॠजझञटठडढ0णतथदधनप';
-     letters = letters.split('');
-     // Setting up the columns
-     var fontSize = 10,
-     columns = canvas.width / fontSize;
-     // Setting up the drops
-     var drops = [];
-     for (var i = 0; i < columns; i++) {
-     drops[i] = 1;
-     }
-     // Setting up the draw function
-     function draw() {
-      ctx.fillStyle = 'rgba(0, 0, 0, .1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      for (var i = 0; i < drops.length; i++) {
-     var text = letters[Math.floor(Math.random() * letters.length)];
-      ctx.fillStyle = '#0f0';
-     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-     drops[i]++;
-     if (drops[i] * fontSize > canvas.height && Math.random() > .95) {drops[i] = 0;}}}
-     // Loop the animation
-     setInterval(draw, 33);
-      </script>
+    <canvas id="matrixCanvas"></canvas>
 
-    </canvas>
-
-    
-    <header><nav id="navbar">
-
-        <ul>
-            
-        </ul>
-    </nav>
-           <!-- Sticky header -->
+    <header>
+        <!-- Sticky header -->
         <div class="waviy">
-            <span style="--i:1">p</p></span>
+            <span style="--i:1">p</span>
             <span style="--i:2">o</span>
             <span style="--i:3">r</span>
             <span style="--i:4">t</span>
@@ -63,36 +23,84 @@
             <span style="--i:9">o</span>
         </div>
         <nav id="navbar">
-          <a href="index.html"class="active">Profile</a>
-          <a href="project.html">Project</a>
-          <a href="contact.html">Contact us</a>
-         </nav>
+            <a href="index.html" class="active">Profile</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact us</a>
+        </nav>
     </header> 
 
-     
-    <div class="details-container" >
-        <h2>Hi, I'm <b>Bharat Bhushan Aswal </b><br> BSC.IT graduate with a passion for technology and innovation </h2>
-        <p><br>"Welcome to my portfolio!<br> I am a recent BSC.IT graduate eager to explore and contribute to the tech world. <br>With a strong foundation in computer applications, I am excited to take on new challenges and expand my skills."</p>
-              <br>
-            <div class="hello"> <h1>Skills</h1>
-            <p> <b>language :-</b> C ,C++, Python <br><strong>Web Technologies:-</strong>HTML, CSS, JavaScript <br><strong>Database Management:</strong>MySQL <br> <strong>Tools:-</strong>Git , Visual Studio Code </h2>
-            </div>
-            <div class="hello2">
-             <h1><br><strong>Soft Skills:</strong></h1>
-                <p>Problem-solving
-                <br>Team collaboration
-                </b><br>Effective communication
-                <br>Adaptability and eagerness to learn </p>
-            </div>
-            <h1><br>Education</h1><br>
-           <p>Course:-  BSC.IT</p><br>
-            <p><b> University:</b> Hemvati Nandan Bahuguna Garhwal University, Srinagar
-                <br> <br><b> Graduation Year:</b> 2024
-                
-            </p>
-        </section>
+    <div class="details-container">
+        <h2>Hi, I'm <b>Bharat Bhushan Aswal</b><br>BSC.IT graduate with a passion for technology and innovation</h2>
+        <p>"Welcome to my portfolio! I am a recent BSC.IT graduate eager to explore and contribute to the tech world. With a strong foundation in computer applications, I am excited to take on new challenges and expand my skills."</p>
+        
+        <h1>Skills</h1>
+        <p>
+            <strong>Languages:</strong> C, C++, Python <br>
+            <strong>Web Technologies:</strong> HTML, CSS, JavaScript <br>
+            <strong>Database Management:</strong> MySQL <br>
+            <strong>Tools:</strong> Git, Visual Studio Code
+        </p>
+        
+        <h1>Soft Skills:</h1>
+        <p>
+            Problem-solving <br>
+            Team collaboration <br>
+            Effective communication <br>
+            Adaptability and eagerness to learn
+        </p>
+
+        <h1>Education</h1>
+        <p>
+            <strong>Course:</strong> BSC.IT <br>
+            <strong>University:</strong> Hemvati Nandan Bahuguna Garhwal University, Srinagar <br>
+            <strong>Graduation Year:</strong> 2024
+        </p>
     </div>
 
-   
+    <script>
+        // Initialising the canvas
+        var canvas = document.getElementById('matrixCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        function setCanvasSize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        setCanvasSize();
+        window.addEventListener('resize', setCanvasSize);
+
+        // Setting up the letters
+        var letters = 'ABCDEFईउऊGHIJKLMNほअआOPQRST7654UV321XYZあいうはふइएऐオओ987654अं3अःऋॠजझञटठडढ0णतथदधनप';
+        letters = letters.split('');
+
+        // Setting up the columns
+        var fontSize = 16,
+            columns = canvas.width / fontSize;
+
+        // Setting up the drops
+        var drops = [];
+        for (var i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        // Setting up the draw function
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.font = fontSize + 'px monospace';
+            for (var i = 0; i < drops.length; i++) {
+                var text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillStyle = '#0f0';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                drops[i]++;
+                if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+                    drops[i] = 0;
+                }
+            }
+        }
+        // Loop the animation
+        setInterval(draw, 33);
+    </script>
 </body>
 </html>
