@@ -163,7 +163,7 @@ nav a.active {
   }
 
   .details-container {
-    margin: 40% auto; /* Significant top margin to push it down */
+    margin: 70% auto; /* Significant top margin to push it down */
     width: 90%;
     height: auto;
   }
