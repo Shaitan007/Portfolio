@@ -20,6 +20,7 @@ canvas {
 
 /* Details container */
 .details-container {
+  margin-top: 20px;
   max-width: 90%;
   margin: 20% auto; /* Center container horizontally and space from top */
   padding: 20px;
