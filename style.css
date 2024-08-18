@@ -23,6 +23,8 @@ canvas {
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
 }
 
 /* Adjust font sizes */
@@ -159,6 +161,8 @@ nav a.active {
   z-index: 1;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
 }
 
 /* Media queries for smaller screens */
