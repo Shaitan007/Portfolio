@@ -21,7 +21,7 @@ canvas {
 /* Details container */
 .details-container {
   max-width: 90%;
-  margin: 10% auto; /* Center container horizontally and space from top */
+  margin: 20% auto; /* Center container horizontally and space from top */
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
