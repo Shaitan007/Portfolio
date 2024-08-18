@@ -38,7 +38,8 @@ canvas {
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
-    margin-top: 15%; /* Push down more for mobile view */
+    margin-top: 30%; /* Push down more for mobile view */
+    position: relative 
   }
 }
 
@@ -163,7 +164,8 @@ nav a.active {
   }
 
   .details-container {
-    margin: 10% auto; /* Significant top margin to push it down */
+    margin-top: 40%;
+    positon: realtive;
     width: 90%;
     height: auto;
   }
