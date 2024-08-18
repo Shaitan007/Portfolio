@@ -3,35 +3,98 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   background: #000;
 }
 
 /* Canvas styles */
 canvas {
   display: block;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+}
+
+/* Responsive layout */
+.details-container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+  backdrop-filter: blur(10px); /* Apply blur to the background */
+}
+
+/* Adjust font sizes */
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .details-container {
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Header styles */
+header {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: -1;
+  text-align: center;
+  color: white;
+  transition: 0.3s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Matrix rain */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
 }
 
 /* Jumping words */
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 .waviy {
-  margin: 50px auto 20px;
+  margin: 10px auto;
   width: auto;
   font-size: 2.5rem;
   text-align: center;
-  color: white;
-  position: relative;
-  z-index: 1001; /* Make sure this is above the canvas */
 }
 
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
   position: relative;
   display: inline-block;
+  color: #fff;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
@@ -51,13 +114,14 @@ nav {
   backdrop-filter: blur(10px);
   font-size: 1em;
   width: 100%;
+  margin: 0;
   padding: 10px 0;
   color: white;
-  position: sticky;
-  top: 0;
+  text-decoration: none;
+  position: fixed;
+  top: 50px; /* Adjust according to your layout */
   text-align: center;
-  z-index: 1000; /* Ensure the navbar is above other content */
-  background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a background color to make the navbar visible over the content */
+  z-index: 1000;
 }
 
 nav a {
@@ -73,68 +137,62 @@ nav a.active {
   background: rgba(31, 247, 103, 0.438);
 }
 
+/* Navbar */
+.navbar {
+  padding: 20px 0;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 /* Details container */
 .details-container {
   position: relative;
-  margin: 150px auto 20px;
+  margin: 10% auto;
   width: 90%;
   max-width: 800px;
-  color: #ffff;
+  color: #fff;
   border: 4px solid lightgreen;
   padding: 20px;
   text-align: center;
   z-index: 1;
-}
-
-/* Adjust font sizes */
-h1, h2, h3 {
-  font-size: 2rem;
-  margin: 20px 0;
-}
-
-p {
-  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+  backdrop-filter: blur(10px); /* Apply blur to the background */
 }
 
 /* Media queries for smaller screens */
-@media (max-width: 768px) {
-  /* Adjust styles for smaller screens */
-  .details-container {
-    padding: 10px;
-  }
-
+@media (max-width: 600px) {
   h1, h2, h3 {
     font-size: 1.5rem;
     margin: 10px 0;
   }
 
-  p {
+  .navbar a {
     font-size: 1rem;
+    padding: 8px;
   }
-
+  
   .waviy {
     font-size: 1.8rem;
     padding: 20px 0;
+    text-align: center;
   }
 
   nav {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: auto;
     text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
   }
 
   .details-container {
     margin-top: 20px;
     width: 90%;
     height: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  nav a {
-    font-size: 0.9rem;
-    padding: 8px;
   }
 }
