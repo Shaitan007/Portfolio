@@ -180,7 +180,7 @@ nav a.active {
   }
 
   .details-container {
-    margin:30px auto 20px; /* Move container down on mobile */
+    margin:40px auto 20px; /* Move container down on mobile */
     width: 90%;
     height: auto;
   }
