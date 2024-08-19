@@ -174,8 +174,7 @@ nav a.active {
 }
 
 
-@media (max-width: 320px)
-{
+@media (max-width: 320px){
    h1, h2, h3 {
     font-size: 1.2rem;
     margin: 10px 0;
