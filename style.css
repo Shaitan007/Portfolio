@@ -37,12 +37,10 @@ canvas {
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
-    margin-top: 25%; /* Push down more for mobile view */
-  }
+    margin-top: 25%;  }
   .navbar{  flex-direction: column; /* Stack buttons vertically on smaller screens */
-        align-items: center;
+        align-items: center;   }
 }
-
 /* Header styles */
 header {
   width: 100%;
