@@ -174,29 +174,42 @@ nav a.active {
 }
 
 
-@media (max-width: 320px){
+@media (max-width: 412px)
+{
    h1, h2, h3 {
     font-size: 1.2rem;
     margin: 10px 0;
   }
-  
+  .waviy {
+    margin-left:10%;
+    font-size: 1.8rem;
+    padding: 20px 0;
+    text-align: center;
+  }
   nav {
-    width:61%;
-    flex-direction: row;
+    width:35%;
     align-items: center;
     position: fixed;
-    top: 20px;
-    left: 25%;
-    right: 0;
+    top: 100px;
+    left: 10;
+    right: 5%;
     height: auto;
     text-align: center;
     padding: 10px 0;
     z-index: 1000;
   }
  .details-container {
-      margin-top: 30%; 
-      width: 90%;
+      flex-wrap: wrap; 
+      gap: 10px;
+      display: flex;
+      margin-top: 50%; 
+      width: 100%;
       height: auto;
+      flex: 1;
+      text-align: left;
+      padding: 10px;
+      box-sizing: border-box;
+      flex-wrap: wrap
   }
   
 }
