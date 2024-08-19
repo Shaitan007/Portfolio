@@ -172,3 +172,32 @@ nav a.active {
     height: auto;
   }
 }
+
+
+@media (max-width: 320px)
+{
+   h1, h2, h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  nav {
+    width:61%;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 25%;
+    right: 0;
+    height: auto;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+ .details-container {
+      margin-top: 30%; 
+      width: 90%;
+      height: auto;
+  }
+  
+}
