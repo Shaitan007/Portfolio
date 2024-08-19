@@ -21,7 +21,7 @@ canvas {
 /* Details container */
 .details-container {
   max-width: 90%;
-  margin: 10% auto; /* Center container horizontally and space from top */
+  margin: 14% auto; /* Center container horizontally and space from top */
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
@@ -44,7 +44,7 @@ canvas {
 
 /* Header styles */
 header {
-  width: 20%;
+  width: 100%;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -71,7 +71,7 @@ canvas {
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 .waviy {
-  margin: 10px auto;
+  margin: 20px auto;
   width: auto;
   font-size: 2.5rem;
   text-align: center;
@@ -100,13 +100,13 @@ canvas {
 nav {
   backdrop-filter: blur(10px);
   font-size: 1em;
-  width: 20%;
-  margin: 10px;
+  width: 24%;
+  margin: 0;
   padding: 10px 0;
   color: white;
   text-decoration: none;
   position: fixed;
-  top: 100px; /* Adjust according to your layout */
+  top: 90px; /* Adjust according to your layout */
   text-align: center;
   z-index: 1000;
 }
