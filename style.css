@@ -23,7 +23,7 @@ canvas {
   max-width: 90%;
   margin: 13% auto; /* Center container horizontally and space from top */
   padding: 20px;
-  backdrop-filter: blur(2px); /* Apply blur to the background */
+  backdrop-filter: blur(10px); /* Apply blur to the background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
   color: #fff;
@@ -37,8 +37,10 @@ canvas {
 @media (max-width: 768px) {
   .details-container {
     padding: 10px;
-    margin-top: 15%; /* Push down more for mobile view */
+    margin-top: 25%; /* Push down more for mobile view */
   }
+  .navbar{  flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center;
 }
 
 /* Header styles */
@@ -96,7 +98,9 @@ canvas {
 }
 
 /* Navigation bar styles */
-nav {
+nav {gap: 10px;
+  justify-content: center;
+  display:flex;
   backdrop-filter: blur(10px);
   font-size: 1em;
   width: 24%;
