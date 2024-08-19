@@ -21,7 +21,7 @@ canvas {
 /* Details container */
 .details-container {
   max-width: 90%;
-  margin: 20% auto; /* Center container horizontally and space from top */
+  margin: 10% auto; /* Center container horizontally and space from top */
   padding: 20px;
   background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
   backdrop-filter: blur(10px); /* Apply blur to the background */
@@ -44,7 +44,7 @@ canvas {
 
 /* Header styles */
 header {
-  width: 100%;
+  width: 20%;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -106,7 +106,7 @@ nav {
   color: white;
   text-decoration: none;
   position: fixed;
-  top: 50px; /* Adjust according to your layout */
+  top: 100px; /* Adjust according to your layout */
   text-align: center;
   z-index: 1000;
 }
