@@ -23,7 +23,7 @@ canvas {
   max-width: 90%;
   margin: 13% auto; /* Center container horizontally and space from top */
   padding: 20px;
-  backdrop-filter: blur(6px); /* Apply blur to the background */
+  backdrop-filter: blur(2px); /* Apply blur to the background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
   color: #fff;
