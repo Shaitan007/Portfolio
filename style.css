@@ -133,7 +133,43 @@ nav a.active {
   flex-direction: column;
   text-align: center;
 }
+@media (max-width: 640px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
 
+  .navbar a {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  
+  .waviy {
+    font-size: 1.8rem;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav {
+    width:51%;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: ;
+    left: 25%;
+    right: 0;
+    height: auto;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .details-container {
+    margin: 28% auto; /* Significant top margin to push it down */
+    width: 90%;
+    height: auto;
+  }
+}
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
   h1, h2, h3 {
