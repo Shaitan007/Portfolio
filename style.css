@@ -237,7 +237,44 @@ nav a.active {
   }
 }
 
+@media (max-width: 544px) {
+  h1, h2, h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+  }
 
+  .navbar a {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .waviy {
+    font-size: 1.6rem;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  nav {
+    width: 51%;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    left: 25%;
+    height: auto;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .details-container {
+    margin: 36% auto; /* Adjusted top margin */
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
 
 @media (max-width: 412px) {
   h1, h2, h3 {
