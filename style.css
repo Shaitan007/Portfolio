@@ -151,7 +151,7 @@ nav a.active {
     z-index: 1000;
   }
   .details-container {
-    margin: 34% auto; /* Adjusted top margin */
+    margin: 30% auto; /* Adjusted top margin */
     width: 90%;
     height: auto;
     padding: 10px;
