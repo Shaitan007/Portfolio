@@ -71,7 +71,7 @@
         window.addEventListener('resize', setCanvasSize);
 
         // Setting up the letters
-        var letters = 'ABCDEFईउऊGHIJKLMNほअआOPQRST7654UV321XYZあいうはふइएऐオओ987654अं3अःऋॠजझञटठडढ0णतथदधनप';
+        var letters = 'ABCDEFईउऊGHIJKLMNほअआOPQRST7654UV321XYZあいうはふइएऐオオ987654अं3अःऋॠजझञटठडढ0णतथदधनप';
         letters = letters.split('');
 
         // Setting up the columns
@@ -89,17 +89,17 @@
             ctx.fillStyle = 'rgba(0, 0, 0, .1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.font = fontSize + 'px monospace';
+            ctx.fillStyle = '#0f0';
+
             for (var i = 0; i < drops.length; i++) {
                 var text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillStyle = '#0f0';
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                drops[i]++;
-                if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
                     drops[i] = 0;
                 }
+                drops[i]++;
             }
         }
-        // Loop the animation
         setInterval(draw, 33);
     </script>
 </body>
