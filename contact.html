@@ -95,10 +95,33 @@
 	<div class="container">
 		<h1><b><span style="color:#33CC33">Contact ME</span></b></h1>
 		<p> Phone no:- <span style="color:#E1E6E1">7017696392</span></p>
-        <p> Gmail:- <span style="color:#E1E6E1">Bharatbhushanaswal@gmail.com</span> </p>
-        
-               
-       
+        <p> Gmail:- <span style="color:#E1E6E1" class="hover">Bharatbhushanaswal@gmail.com</span> </p>
+        <style>
+		.hover { color: #0000;
+  background: linear-gradient(90deg,#1095c1 50%,#000 0) 
+    var(--_p,100%)/200% no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: .4s;
+}
+.hover:hover {
+  --_p: 0%;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  margin:0;
+  cursor: pointer;
+  padding: 0 .1em;
+}
+		</style>
        
 <footer>
 <div class="icons">
